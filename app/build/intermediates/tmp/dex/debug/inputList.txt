@@ -1,0 +1,5 @@
+/Users/AlexSaunders/AndroidStudioProjects/SwipeTab/app/build/intermediates/classes/debug
+/Users/AlexSaunders/AndroidStudioProjects/SwipeTab/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-34cda49f789262fc96d9b066d68c3a93a2856b0e.jar
+/Users/AlexSaunders/AndroidStudioProjects/SwipeTab/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-40330c5653154057c98162bb416479f7612e21b8.jar
+/Users/AlexSaunders/AndroidStudioProjects/SwipeTab/app/build/intermediates/pre-dexed/debug/classes-bcd8bbd9719f8df825694e1fcfececa2efe22368.jar
+/Users/AlexSaunders/AndroidStudioProjects/SwipeTab/app/build/intermediates/pre-dexed/debug/classes-38a027a69f7481578072d023081a061e01392fbf.jar
