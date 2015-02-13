@@ -1,16 +1,20 @@
 package com.learn2crack.tab;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.learn2crack.tab.R.drawable;
 
 public class Login extends Fragment {
     @Override
@@ -32,6 +36,22 @@ public class Login extends Fragment {
         //username font
         EditText un = (EditText) login.findViewById(R.id.username);
         un.setTypeface(Typeface.DEFAULT);
+
+        final Button button = (Button) login.findViewById(R.id.button);
+        button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch(motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        view.setBackgroundResource(drawable.button);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        view.setBackgroundResource(drawable.buttondark);
+                        break;
+                }
+                return true;
+            }
+        });
 
         return login;
     }
