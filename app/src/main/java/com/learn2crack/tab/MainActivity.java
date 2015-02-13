@@ -76,19 +76,4 @@ public class MainActivity extends FragmentActivity {
         System.out.println("test");
 
     }
-
-    public void newActivity(View view) {
-
-        Intent getNameScreenIntent = new Intent(this, LocationActivity.class);
-
-        final int result = 1;
-        EditText usernameEditText = (EditText) findViewById(R.id.username);
-        String username = String.valueOf(usernameEditText.getText());
-
-        getNameScreenIntent.putExtra("callingActivity", username);
-
-        startActivity(getNameScreenIntent);
-    }
-
-
 }

@@ -1,5 +1,6 @@
 package com.learn2crack.tab;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class Login extends Fragment {
                              Bundle savedInstanceState) {
 
         //creating the view from the login_frag xml layout file
-        View login = inflater.inflate(R.layout.login_frag, container, false);
+        final View login = inflater.inflate(R.layout.login_frag, container, false);
 
         //setting text to Or, testing purposes
         TextView tv = (TextView) login.findViewById(R.id.or);
@@ -44,6 +45,17 @@ public class Login extends Fragment {
                 switch(motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         view.setBackgroundResource(drawable.button);
+
+                        Intent getNameScreenIntent = new Intent(login.getContext(), LocationActivity.class);
+
+                        final int result = 1;
+                        EditText usernameEditText = (EditText) login.findViewById(R.id.username);
+                        String username = String.valueOf(usernameEditText.getText());
+
+                        getNameScreenIntent.putExtra("callingActivity", username);
+
+                        startActivity(getNameScreenIntent);
+
                         break;
                     case MotionEvent.ACTION_UP:
                         view.setBackgroundResource(drawable.buttondark);
@@ -52,6 +64,7 @@ public class Login extends Fragment {
                 return true;
             }
         });
+
 
         return login;
     }
